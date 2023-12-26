@@ -37,8 +37,14 @@
           // 네트워크 탭에서 어떤 일이 벌어지는지 확인해보는 과정을 통해서 비동기 통신의 흐름을 이해할 수 있습니다.
           console.log(pokemonData.species.name);
         }
+      } catch (error) {
+        // 오류 처리
+        // 네트워크 오류나, 요청시래등 여러가지 변수가 상당히 많으므로 서비스 측면에서는
+        // 어떤 오류가 발생했는지, 어떻게 처리해야 하는지 등을 미리 정의해두는 것이 모범 사례
+        console.error("데이터 못받아옴: ". error);
       }
-    }
+    };
+    getPokemonAjax;
   </script>
 </body>
 </html>
