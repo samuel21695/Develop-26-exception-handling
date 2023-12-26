@@ -7,7 +7,7 @@
 </head>
 <body>
   <script>
-    const getPokemonAjax = async () => {
+    const getPokemonAJAX = async () => {
       try {
         /**
           예외 처리는 실행하려고 하는 코드를 try 블록으로 감싸고,
@@ -24,7 +24,7 @@
 
         // 첫 번째 요청: 전체 포켓몬 수 가져오기
         const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
-        const data = await reponse.json();
+        const data = await response.json();
         const count = data.count;
 
         // 각 포켓몬이 정보를 가져오기 위한 요청
@@ -41,10 +41,10 @@
         // 오류 처리
         // 네트워크 오류나, 요청시래등 여러가지 변수가 상당히 많으므로 서비스 측면에서는
         // 어떤 오류가 발생했는지, 어떻게 처리해야 하는지 등을 미리 정의해두는 것이 모범 사례
-        console.error("데이터 못받아옴: ". error);
+        console.error("데이터 못받아옴: ", error);
       }
     };
-    getPokemonAjax;
+    getPokemonAJAX();
   </script>
 </body>
 </html>
