@@ -21,7 +21,11 @@
           예상하지 못하거나, 예상할 수 없는 상황에 따른 다방면의 상황을 대비하기 위해서
           '등장해야만 하는 것'에 초점을 맞추어 예외처리를 진행합니다.
         */ 
-        
+
+        // 첫 번째 요청: 전체 포켓몬 수 가져오기
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+        const data = await reponse.json();
+        const count = data.count;
       }
     }
   </script>
